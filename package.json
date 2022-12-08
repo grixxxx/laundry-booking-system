@@ -1,0 +1,16 @@
+{
+  "name": "hci2-capstone-proposal",
+  "version": "1.0.0",
+  "description": "",
+  "source": "scr/index.html",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.56.1"
+  }
+}

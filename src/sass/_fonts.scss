@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+@font-face {
+  font-family: coolvetica-bold;
+  src: url(/src/asset/font/coolvetica/coolvetica\ compressed\ hv.otf);
+}
+
+@font-face {
+  font-family: coolvetica-reg;
+  src: url(/src/asset/font/coolvetica/coolvetica\ rg.otf);
+}
+
+$mainFont-regular: coolvetica-reg;
+$mainFont-bold: coolvetica-bold;
+
+$interFont: "Inter";

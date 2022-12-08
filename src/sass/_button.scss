@@ -1,0 +1,81 @@
+@use "./fonts" as *;
+@use "./colors" as *;
+
+$border10: 0.625rem;
+
+.main-button-container {
+  button {
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: $border10;
+    font-family: $interFont;
+    font-weight: bold;
+    width: 12.5rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border: 1px solid $accentClr;
+
+    &:nth-child(1) {
+      background-color: $accentClr;
+      color: $primaryClr;
+      margin-right: 1rem;
+    }
+
+    &:nth-child(2) {
+      background-color: $primaryClr;
+      color: $accentClr;
+    }
+
+    &:hover {
+      background-color: #0d4474;
+      color: $primaryClr;
+      border-color: transparent;
+    }
+  }
+}
+
+nav {
+  padding-block: 4rem;
+  margin-right: clamp(2rem, 10vw, 12.5rem);
+
+  ul {
+    display: flex;
+    gap: 3rem;
+
+    li {
+      cursor: pointer;
+      padding: 1rem 2rem;
+      font-weight: 500;
+
+      a {
+        text-decoration: none;
+        color: $secondaryClr;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          color: $accentClr;
+        }
+      }
+    }
+
+    .active {
+      background-color: $accentClr;
+      border-radius: $border10;
+      transition: 0.3s ease-in-out;
+      border: 1px solid $accentClr;
+
+      &:hover {
+        background-color: #0d4474;
+        color: $primaryClr;
+        border-color: transparent;
+      }
+      &:hover a {
+        color: $primaryClr;
+      }
+
+      a {
+        color: $primaryClr;
+      }
+    }
+  }
+}

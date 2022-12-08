@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: coolvetica-bold;
+  src: url(/src/asset/font/coolvetica/coolvetica\ compressed\ hv.otf);
+}
+@font-face {
+  font-family: coolvetica-reg;
+  src: url(/src/asset/font/coolvetica/coolvetica\ rg.otf);
+}
+.main-button-container button {
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.625rem;
+  font-family: "Inter";
+  font-weight: bold;
+  width: 12.5rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  border: 1px solid #1e88e5;
+}
+.main-button-container button:nth-child(1) {
+  background-color: #1e88e5;
+  color: #e3f2fd;
+  margin-right: 1rem;
+}
+.main-button-container button:nth-child(2) {
+  background-color: #e3f2fd;
+  color: #1e88e5;
+}
+.main-button-container button:hover {
+  background-color: #0d4474;
+  color: #e3f2fd;
+  border-color: transparent;
+}
+
+nav {
+  padding-block: 4rem;
+  margin-right: clamp(2rem, 10vw, 12.5rem);
+}
+nav ul {
+  display: flex;
+  gap: 3rem;
+}
+nav ul li {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  font-weight: 500;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #333333;
+  transition: 0.3s ease-in-out;
+}
+nav ul li a:hover {
+  color: #1e88e5;
+}
+nav ul .active {
+  background-color: #1e88e5;
+  border-radius: 0.625rem;
+  transition: 0.3s ease-in-out;
+  border: 1px solid #1e88e5;
+}
+nav ul .active:hover {
+  background-color: #0d4474;
+  color: #e3f2fd;
+  border-color: transparent;
+}
+nav ul .active:hover a {
+  color: #e3f2fd;
+}
+nav ul .active a {
+  color: #e3f2fd;
+}
+
+body {
+  background-color: #e3f2fd;
+  color: #333333;
+  font-family: "Inter";
+}
+body header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: none;
+  flex-direction: none;
+  gap: none;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  gap: 1.9375rem;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+}
+main .main-wrapper {
+  display: flex;
+  justify-content: none;
+  align-items: none;
+  flex-direction: column;
+  gap: 2rem;
+  transform: translateY(-7rem);
+}
+main .main-wrapper .main-title {
+  font-size: clamp(4rem, 10vw, 9.375rem);
+  font-family: coolvetica-bold;
+}
+main .main-wrapper .main-body {
+  font-size: clamp(1rem, 3vw, 1.875rem);
+  opacity: 0.5;
+}
+main .main-banner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: none;
+  gap: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-block: 2rem;
+  background-color: #1e88e5;
+  color: #e3f2fd;
+}
+main .main-banner h1 {
+  font-size: clamp(0.5rem, 1vw, 1.2rem);
+}
+main .hanging-clothes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: min(400px, 50vw);
+}
+main .washing-machine {
+  position: absolute;
+  right: 0;
+  bottom: 5rem;
+  width: min(600px, 80%);
+  z-index: -1;
+}
+main .iron-cloth {
+  position: absolute;
+  bottom: 5rem;
+  left: 5rem;
+  width: 300px;
+}
+
+/*# sourceMappingURL=main.css.map */
