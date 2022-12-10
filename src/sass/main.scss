@@ -4,6 +4,15 @@
 @use "./fonts" as *;
 @use "./mixins" as *;
 
+html {
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+.scroll-down nav {
+  padding-block: 1rem;
+}
+
 body {
   background-color: $primaryClr;
   color: $secondaryClr;
@@ -14,6 +23,7 @@ body {
     position: fixed;
     width: 100%;
     z-index: 1;
+    backdrop-filter: blur(100px);
   }
 }
 
@@ -35,6 +45,9 @@ main {
     .main-body {
       font-size: clamp(1rem, 3vw, 1.875rem);
       opacity: 0.5;
+      line-height: 1.5;
+      width: 30ch;
+      margin: 0 auto;
     }
   }
 
@@ -56,6 +69,7 @@ main {
     top: 0;
     left: 0;
     width: min(400px, 50vw);
+    z-index: 1;
   }
 
   .washing-machine {

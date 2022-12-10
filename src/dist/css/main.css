@@ -171,12 +171,12 @@ table {
 }
 
 nav {
-  padding-block: 4rem;
+  padding-block: 3rem;
   margin-right: clamp(2rem, 10vw, 12.5rem);
+  transition: all 0.5s ease-in-out;
 }
 nav ul {
   display: flex;
-  gap: 3rem;
 }
 nav ul li {
   cursor: pointer;
@@ -209,6 +209,15 @@ nav ul .active a {
   color: #e3f2fd;
 }
 
+html {
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+.scroll-down nav {
+  padding-block: 1rem;
+}
+
 body {
   background-color: #e3f2fd;
   color: #333333;
@@ -223,6 +232,7 @@ body header {
   position: fixed;
   width: 100%;
   z-index: 1;
+  backdrop-filter: blur(100px);
 }
 
 main {
@@ -250,6 +260,9 @@ main .main-wrapper .main-title {
 main .main-wrapper .main-body {
   font-size: clamp(1rem, 3vw, 1.875rem);
   opacity: 0.5;
+  line-height: 1.5;
+  width: 30ch;
+  margin: 0 auto;
 }
 main .main-banner {
   display: flex;
@@ -272,6 +285,7 @@ main .hanging-clothes {
   top: 0;
   left: 0;
   width: min(400px, 50vw);
+  z-index: 1;
 }
 main .washing-machine {
   position: absolute;
