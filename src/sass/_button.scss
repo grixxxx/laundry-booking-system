@@ -58,6 +58,11 @@ nav {
       }
     }
 
+    .contact-button {
+      text-decoration: none;
+      color: $primaryClr;
+    }
+
     .active {
       background-color: $accentClr;
       border-radius: $border10;

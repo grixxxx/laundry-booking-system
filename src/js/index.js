@@ -8,3 +8,11 @@ window.addEventListener("scroll", () => {
     ? body.classList.remove("scroll-down")
     : body.classList.add("scroll-down");
 });
+
+const contactButton = document
+  .querySelector(".contact-button")
+  .addEventListener("click", () => {
+    const contactModal = document.querySelector(".contact-modal");
+
+    contactModal.showModal();
+  });

@@ -1,0 +1,36 @@
+@use "./colors" as *;
+@use "./fonts" as *;
+.contact-modal {
+  background-color: $accentClr;
+  color: $primaryClr;
+  z-index: 9999;
+  border: none;
+  padding: 3rem 5rem;
+  border-radius: 1.25rem;
+
+  &::backdrop {
+    backdrop-filter: blur(3px);
+  }
+
+  h1 {
+    font-family: $mainFont-bold;
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  div {
+    margin-bottom: 1.5rem;
+
+    h2 {
+      font-family: $mainFont-regular;
+      font-size: 1.670625rem;
+      margin-bottom: 0.625rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      font-family: $interFont;
+    }
+  }
+}
