@@ -16,3 +16,11 @@ const contactButton = document
 
     contactModal.showModal();
   });
+
+const loginButton = document
+  .querySelector(".login-btn")
+  .addEventListener("click", () => {
+    const loginModal = document.querySelector(".login-modal");
+
+    loginModal.showModal();
+  });

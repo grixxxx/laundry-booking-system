@@ -1,9 +1,10 @@
 @use "./colors" as *;
 @use "./fonts" as *;
+@use "./mixins" as *;
+
 .contact-modal {
   background-color: $accentClr;
   color: $primaryClr;
-  z-index: 9999;
   border: none;
   padding: 3rem 5rem;
   border-radius: 1.25rem;
@@ -31,6 +32,45 @@
     p {
       font-size: 1.25rem;
       font-family: $interFont;
+    }
+  }
+}
+
+.login-modal {
+  @extend .contact-modal;
+
+  p {
+    font-family: $interFont;
+    max-width: 60ch;
+    margin-bottom: 1.75rem;
+  }
+
+  form {
+    @include flexProp(center, center, column, 1rem);
+
+    input {
+      width: 100%;
+      background-color: transparent;
+      border: 1px solid $primaryClr;
+      border-radius: 0.625rem;
+      color: $primaryClr;
+      padding: 1rem;
+      font-size: 1rem;
+      font-family: $interFont;
+    }
+
+    button {
+      width: 100%;
+      color: $accentClr;
+    }
+
+    :nth-child(4) {
+      background-color: transparent;
+      color: $primaryClr;
+
+      &:hover {
+        color: $hoverClr;
+      }
     }
   }
 }

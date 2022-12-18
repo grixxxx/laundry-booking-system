@@ -88,6 +88,10 @@ video {
   vertical-align: baseline;
 }
 
+p {
+  line-height: 1.7;
+}
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -213,34 +217,67 @@ nav ul .active a {
   color: #e3f2fd;
 }
 
-.contact-modal {
+.contact-modal, .login-modal {
   background-color: #1e88e5;
   color: #e3f2fd;
-  z-index: 9999;
   border: none;
   padding: 3rem 5rem;
   border-radius: 1.25rem;
 }
-.contact-modal::backdrop {
+.contact-modal::backdrop, .login-modal::backdrop {
   backdrop-filter: blur(3px);
 }
-.contact-modal h1 {
+.contact-modal h1, .login-modal h1 {
   font-family: coolvetica-bold;
   font-size: 5rem;
   margin-bottom: 1.5rem;
   text-align: center;
 }
-.contact-modal div {
+.contact-modal div, .login-modal div {
   margin-bottom: 1.5rem;
 }
-.contact-modal div h2 {
+.contact-modal div h2, .login-modal div h2 {
   font-family: coolvetica-reg;
   font-size: 1.670625rem;
   margin-bottom: 0.625rem;
 }
-.contact-modal div p {
+.contact-modal div p, .login-modal div p {
   font-size: 1.25rem;
   font-family: "Inter";
+}
+
+.login-modal p {
+  font-family: "Inter";
+  max-width: 60ch;
+  margin-bottom: 1.75rem;
+}
+.login-modal form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.login-modal form input {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #e3f2fd;
+  border-radius: 0.625rem;
+  color: #e3f2fd;
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: "Inter";
+}
+.login-modal form button {
+  width: 100%;
+  color: #1e88e5;
+}
+.login-modal form :nth-child(4) {
+  background-color: transparent;
+  color: #e3f2fd;
+}
+.login-modal form :nth-child(4):hover {
+  color: #0d4474;
 }
 
 html {
